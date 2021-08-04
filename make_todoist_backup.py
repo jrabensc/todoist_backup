@@ -55,5 +55,5 @@ def get_todoist_bak(token, output_path):
           fd.write(chunk)
     print('Successfully saved file '+file_name+' to '+output_path+'.')
 
-get_todoist_bak(token = input_token, output_path = input_path)
-
+if __name__ == "__main__":
+    get_todoist_bak(token = input_token, output_path = input_path)
