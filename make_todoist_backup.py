@@ -16,13 +16,13 @@ args = parser.parse_args()
 input_token = args.token
 input_path = args.path
 
-def check_input(token, output_path):
+def check_input(token: str, output_path: str):
     if os.path.isdir(output_path) == False:
       sys.exit('No or bad path provided.')
     if len(token) != 40:
       sys.exit('No or bad token provided.')
 
-def get_todoist_bak(token, output_path):
+def get_todoist_bak(token: str, output_path: str):
     # sanity check
     check_input(token = token, output_path = output_path)
     # create API object
